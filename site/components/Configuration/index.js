@@ -1,5 +1,5 @@
 import {PureComponent} from 'react';
-import {pick} from 'lodash';
+import pick from 'lodash/pick';
 import {Select, Icon} from 'antd';
 import {withTransientRegion} from 'react-kiss';
 import OptionsModal from './OptionsModal';

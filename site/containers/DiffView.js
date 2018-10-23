@@ -1,4 +1,4 @@
-import {omit} from 'lodash';
+import omit from 'lodash/omit';
 import DiffView from '../components/DiffView';
 import {joinConfiguration} from '../regions';
 

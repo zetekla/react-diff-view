@@ -1,5 +1,5 @@
 import {PureComponent, Fragment} from 'react';
-import {uniqueId} from 'lodash';
+import uniqueId from 'lodash/uniqueId';
 import sha from 'sha1';
 import {bind} from 'lodash-decorators';
 import {Whether} from 'react-whether';

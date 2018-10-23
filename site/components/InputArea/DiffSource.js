@@ -35,18 +35,18 @@ class DiffSource extends PureComponent {
                     <a onClick={onSwitchInputType}>I want to beautify a diff</a>
                 </div>
                 <div className={styles.input}>
-                    <TextInput
-                        className={styles.inputText}
-                        title="ORIGINAL TEXT"
-                        value={oldSource}
-                        onChange={onOldSourceChange}
-                    />
-                    <TextInput
-                        className={styles.inputText}
-                        title="CHANGED TEXT"
-                        value={newSource}
-                        onChange={onNewSourceChange}
-                    />
+                <TextInput
+                    className={styles.inputText}
+                    title="ORIGINAL TEXT"
+                    value={oldSource}
+                    onChange={onOldSourceChange}
+                />
+                <TextInput
+                    className={styles.inputText}
+                    title="CHANGED TEXT"
+                    value={newSource}
+                    onChange={onNewSourceChange}
+                />
                 </div>
                 <SubmitButton onClick={this.submit} />
             </div>

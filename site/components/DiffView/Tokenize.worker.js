@@ -1,5 +1,5 @@
 import {tokenize, markEdits, markWord} from 'react-diff-view/tokenize';
-import {compact} from 'lodash';
+import compact from 'lodash/compact';
 import refractor from 'refractor';
 
 self.addEventListener(
