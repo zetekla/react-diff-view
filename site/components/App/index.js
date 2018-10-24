@@ -1,7 +1,6 @@
 import {PureComponent, Fragment} from 'react';
 import uniqueId from 'lodash/uniqueId';
 import sha from 'sha1';
-import {Whether} from 'react-whether';
 import {createSelector} from 'reselect';
 import {parseDiff} from 'react-diff-view';
 import {establishConfiguration} from '../../regions';
@@ -46,21 +45,17 @@ class App extends PureComponent {
         return (
             <div className={styles.root}>
                 <InputArea onSubmit={this.receiveInput} />
-                <Whether matches={!!file}>
-                    {
-                        () => (
-                            <Fragment>
-                                <Configuration />
-                                <DiffView
-                                    key={sha(diff) + (source ? sha(source) : '')}
-                                    type={file.type}
-                                    hunks={file.hunks}
-                                    oldSource={source}
-                                />
-                            </Fragment>
-                        )
-                    }
-                </Whether>
+                { !!file
+                      && <Fragment>
+                          <Configuration />
+                          <DiffView
+                              key={sha(diff) + (source ? sha(source) : '')}
+                              type={file.type}
+                              hunks={file.hunks}
+                              oldSource={source}
+                          />
+                      </Fragment>
+                }
             </div>
         );
     }
