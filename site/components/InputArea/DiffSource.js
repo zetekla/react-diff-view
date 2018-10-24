@@ -1,6 +1,5 @@
 import {PureComponent} from 'react';
 import classNames from 'classnames';
-import {bind} from 'lodash-decorators';
 import {withTransientRegion} from 'react-kiss';
 import {formatLines, diffLines} from 'unidiff';
 import TextInput from './TextInput';
@@ -8,9 +7,7 @@ import SubmitButton from './SubmitButton';
 import styles from './DiffSource.css';
 
 class DiffSource extends PureComponent {
-
-    @bind()
-    submit() {
+    submit = () => {
         const {oldSource, newSource, onSubmit} = this.props;
 
         if (!oldSource || !newSource) {
@@ -35,18 +32,18 @@ class DiffSource extends PureComponent {
                     <a onClick={onSwitchInputType}>I want to beautify a diff</a>
                 </div>
                 <div className={styles.input}>
-                <TextInput
-                    className={styles.inputText}
-                    title="ORIGINAL TEXT"
-                    value={oldSource}
-                    onChange={onOldSourceChange}
-                />
-                <TextInput
-                    className={styles.inputText}
-                    title="CHANGED TEXT"
-                    value={newSource}
-                    onChange={onNewSourceChange}
-                />
+                    <TextInput
+                        className={styles.inputText}
+                        title="ORIGINAL TEXT"
+                        value={oldSource}
+                        onChange={onOldSourceChange}
+                    />
+                    <TextInput
+                        className={styles.inputText}
+                        title="CHANGED TEXT"
+                        value={newSource}
+                        onChange={onNewSourceChange}
+                    />
                 </div>
                 <SubmitButton onClick={this.submit} />
             </div>

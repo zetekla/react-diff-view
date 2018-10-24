@@ -1,6 +1,5 @@
 import {PureComponent} from 'react';
 import {Icon} from 'antd';
-import {bind} from 'lodash-decorators';
 import {Decoration} from 'react-diff-view';
 import styles from './Unfold.css';
 
@@ -12,8 +11,7 @@ const ICON_TYPE_MAPPING = {
 
 export default class Unfold extends PureComponent {
 
-    @bind()
-    expand() {
+    expand = () => {
         const {start, end, onExpand} = this.props;
         onExpand(start, end);
     }

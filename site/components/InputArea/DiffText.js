@@ -1,6 +1,5 @@
 import {PureComponent} from 'react';
 import classNames from 'classnames';
-import {bind} from 'lodash-decorators';
 import {Icon} from 'antd';
 import TextInput from './TextInput';
 import SubmitButton from './SubmitButton';
@@ -14,23 +13,13 @@ export default class DiffText extends PureComponent {
         isSourceVisible: false
     };
 
-    @bind()
-    updateDiff(diff) {
-        this.setState({diff});
-    }
+    updateDiff = diff => this.setState({diff});
 
-    @bind()
-    updateSource(source) {
-        this.setState({source});
-    }
+    updateSource = source => this.setState({source});
 
-    @bind()
-    toggleSourceInput() {
-        this.setState(state => ({isSourceVisible: !state.isSourceVisible}));
-    }
+    toggleSourceInput= () => this.setState(state => ({isSourceVisible: !state.isSourceVisible}));
 
-    @bind()
-    submit() {
+    submit = () => {
         const {onSubmit} = this.props;
         const {diff, source, isSourceVisible} = this.state;
         const data = {
