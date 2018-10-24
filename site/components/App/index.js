@@ -42,6 +42,8 @@ class App extends PureComponent {
         const {diff, source} = this.state;
         const file = this.parse(this.state);
 
+        console.warn('FILE', JSON.stringify(file));
+
         return (
             <div className={styles.root}>
                 <InputArea onSubmit={this.receiveInput} />

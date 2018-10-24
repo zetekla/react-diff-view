@@ -7,6 +7,8 @@ import {
     withTokenizeWorker
 } from 'react-diff-view';
 import {compose} from 'recompose';
+// import hunks from './hunks.json';
+// import oldSource from './oldSource.json';
 import 'prism-themes/themes/prism-vs.css';
 import HunkInfo from './HunkInfo';
 import UnfoldCollapsed from './UnfoldCollapsed';
@@ -23,10 +25,13 @@ const DiffView = props => {
         showGutter,
         viewType,
         selectedChanges,
-        tokens,
-        onExpandRange,
-        onToggleChangeSelection
+        tokens
     } = props;
+
+
+    console.warn('diffView props', props, type);
+    const onExpandRange = () => {};
+    const onToggleChangeSelection = () => {};
     const linesCount = oldSource ? oldSource.split('\n').length : 0;
     const renderHunk = (children, hunk, i, hunks) => {
         const previousElement = children[children.length - 1];
@@ -65,6 +70,7 @@ const DiffView = props => {
             children.push(unfoldTailElement);
         }
 
+        console.warn('children', children);
         return children;
     };
 

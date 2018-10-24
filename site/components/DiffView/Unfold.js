@@ -1,4 +1,4 @@
-import {PureComponent} from 'react';
+import React, {PureComponent} from 'react';
 import {Icon} from 'antd';
 import {Decoration} from 'react-diff-view';
 import styles from './Unfold.css';
@@ -10,24 +10,23 @@ const ICON_TYPE_MAPPING = {
 };
 
 export default class Unfold extends PureComponent {
+  expand = () => {
+      const {start, end, onExpand} = this.props;
+      onExpand(start, end);
+  }
 
-    expand = () => {
-        const {start, end, onExpand} = this.props;
-        onExpand(start, end);
-    }
+  render() {
+      const {start, end, direction, ...props} = this.props;
+      const iconType = ICON_TYPE_MAPPING[direction];
+      const lines = end - start;
 
-    render() {
-        const {start, end, direction, ...props} = this.props;
-        const iconType = ICON_TYPE_MAPPING[direction];
-        const lines = end - start;
-
-        return (
-            <Decoration {...props}>
-                <div className={styles.root} onClick={this.expand}>
-                    <Icon type={iconType} />
-                    &nbsp;Expand hidden {lines} lines
-                </div>
-            </Decoration>
-        );
-    }
+      return (
+          <Decoration {...props}>
+              <div className={styles.root} onClick={this.expand}>
+                  <Icon type={iconType} />
+          &nbsp;Expand hidden {lines} lines
+              </div>
+          </Decoration>
+      );
+  }
 }

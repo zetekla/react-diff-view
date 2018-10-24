@@ -1,3 +1,4 @@
+import React from 'react';
 import {Decoration} from 'react-diff-view';
 
 const HunkInfo = ({hunk, ...props}) => (

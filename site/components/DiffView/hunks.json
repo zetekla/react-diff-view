@@ -1,0 +1,121 @@
+[
+  {
+    "content": "@@ -1,11 +1,13 @@",
+    "oldStart": 1,
+    "newStart": 1,
+    "oldLines": 11,
+    "newLines": 13,
+    "changes": [
+      {
+        "content": "The Way that can be told of is not the eternal Way;",
+        "type": "delete",
+        "isDelete": true,
+        "lineNumber": 1
+      },
+      {
+        "content": "The name that can be named is not the eternal name.",
+        "type": "delete",
+        "isDelete": true,
+        "lineNumber": 2
+      },
+      {
+        "content": "The Nameless is the origin of Heaven and Earth;",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 3,
+        "newLineNumber": 1
+      },
+      {
+        "content": "The Named is the mother of all things.",
+        "type": "delete",
+        "isDelete": true,
+        "lineNumber": 4
+      },
+      {
+        "content": "The named is the mother of all things.",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 2
+      },
+      {
+        "content": "",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 3
+      },
+      {
+        "content": "Therefore let there always be non-being,",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 5,
+        "newLineNumber": 4
+      },
+      {
+        "content": "  so we may see their subtlety,",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 6,
+        "newLineNumber": 5
+      },
+      {
+        "content": "And let there always be being,",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 7,
+        "newLineNumber": 6
+      },
+      {
+        "content": "  so we may see their outcome.",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 8,
+        "newLineNumber": 7
+      },
+      {
+        "content": "The two are the same,",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 9,
+        "newLineNumber": 8
+      },
+      {
+        "content": "But after they are produced,",
+        "type": "normal",
+        "isNormal": true,
+        "oldLineNumber": 10,
+        "newLineNumber": 9
+      },
+      {
+        "content": "  they have different names.",
+        "type": "delete",
+        "isDelete": true,
+        "lineNumber": 11
+      },
+      {
+        "content": "  they have different names.",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 10
+      },
+      {
+        "content": "They both may be called deep and profound.",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 11
+      },
+      {
+        "content": "Deeper and more profound,",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 12
+      },
+      {
+        "content": "The door of all subtleties!",
+        "type": "insert",
+        "isInsert": true,
+        "lineNumber": 13
+      }
+    ],
+    "isPlain": false
+  }
+]
