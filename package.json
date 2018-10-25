@@ -1,0 +1,124 @@
+{
+  "name": "react-diff-view",
+  "version": "1.8.2",
+  "description": "A git diff component to consume the git unified diff output.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server --config=webpack.demo.config.js",
+    "build": "webpack --config=webpack.build.config.js",
+    "prepublishOnly": "npm run lint && npm run build",
+    "lint": "eslint src demo"
+  },
+  "author": "otakustay, release built by Pristine",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gitdiff-parser": "^0.1.2",
+    "leven": "^2.1.0",
+    "lodash.escape": "^4.0.1",
+    "lodash.findlastindex": "^4.6.0",
+    "lodash.mapvalues": "^4.6.0",
+    "warning": "^4.0.1"
+  },
+  "devDependencies": {
+    "@ecomfe/eslint-config": "^1.0.0",
+    "antd": "^3.6.2",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^23.0.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-add-react-displayname": "0.0.5",
+    "babel-plugin-react-require": "^3.0.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "copy-webpack-plugin": "^4.5.0",
+    "css-loader": "^0.28.10",
+    "diff": "^3.5.0",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.0.6",
+    "jest": "^23.1.0",
+    "lang-map": "^0.4.0",
+    "lodash": "^4.17.5",
+    "lodash-decorators": "^5.0.1",
+    "path-parse": "^1.0.5",
+    "prismjs": "^1.11.0",
+    "raw-loader": "^0.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-infinite-scroller": "^1.1.3",
+    "react-markdown": "^3.3.0",
+    "react-test-renderer": "^16.2.0",
+    "react-timeago": "^4.1.9",
+    "react-whether": "^1.0.1",
+    "reselect": "^3.0.1",
+    "shallow-changes": "^1.0.2",
+    "short-hash": "^1.0.0",
+    "style-loader": "^0.21.0",
+    "svg-react-loader": "^0.4.5",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^2.1.5",
+    "webpack-dev-server": "^3.1.4",
+    "worker-loader": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=15.6.2",
+    "prop-types": ">=15.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zetekla/react-diff-view.git"
+  },
+  "keywords": [
+    "git",
+    "github",
+    "diff",
+    "git-diff",
+    "react",
+    "component"
+  ],
+  "bugs": {
+    "url": "https://github.com/zetekla/react-diff-view/issues"
+  },
+  "homepage": "https://github.com/zetekla/react-diff-view/tree/release#readme",
+  "files": [
+    "index.js",
+    "index.js.map",
+    "parse.js",
+    "parse.js.map",
+    "index.css",
+    "index.css.map",
+    "src"
+  ],
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "verbose": true,
+    "roots": [
+      "./test"
+    ],
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 78,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "setupFiles": [
+      "./test/setupTest"
+    ]
+  }
+}
